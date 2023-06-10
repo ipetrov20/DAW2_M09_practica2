@@ -1,0 +1,180 @@
+body {
+  width: auto;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('images/fondo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  font-weight: bold;
+}
+
+.player {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper {
+  border: 1px solid transparent;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.37);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track-art {
+  margin: 25px;
+  height: 150px;
+  width: 150px;
+  border: 2px solid #fffafa;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; 
+  border-radius: 190px;
+}
+
+.now-playing {
+  font-size: 1rem;
+}
+
+.track-name {
+  font-size: 30px;
+}
+
+.track-artist {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.buttons {
+  height: 20px;
+
+
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px;
+}
+
+.buttons > div > i{
+  font-size: 50px;
+}
+
+.active {
+  color: black;
+}
+
+.playpause-track,
+.prev-track,
+.next-track {
+  padding: 25px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+  opacity: 1;
+}
+
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  height: 5px;
+  background: #000000;
+  transition: opacity 0.2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 1px solid #000000;
+  cursor: grab;
+  border-radius: 100%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+.volume_slider {
+  width: 30%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward,
+p {
+  cursor: pointer;
+}
+
+i.fa-play-circle:hover,
+i.fa-pause-circle:hover,
+i.fa-step-forward:hover,
+i.fa-step-backward:hover,
+p:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+  rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+/*Keyframe para girar el disco*/
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
